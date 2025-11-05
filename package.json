@@ -1,16 +1,17 @@
-{ 
-  "engines": {
-    "node": "v22.19.0"
-  },
+{
   "name": "WanderLust",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A travel and hosting platform to explore destinations, host properties, and connect travelers — inspired by Airbnb.",
+  "main": "app.js",
+  "engines": {
+    "node": "22.19.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "build": "npm install --legacy-peer-deps"
   },
   "keywords": [],
-  "author": "Asjad Khan",
+  "author": "Khan Asjad Shamshad Ahmed",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.8",
