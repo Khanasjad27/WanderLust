@@ -132,3 +132,6 @@ This project is licensed under the MIT License — free to use and modify with a
 It combines clean backend logic, dynamic EJS views, and cloud integration — built to demonstrate a complete full-stack workflow.
 
 
+---
+
+
