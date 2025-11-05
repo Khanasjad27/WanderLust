@@ -1,0 +1,117 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    flex: 1;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 400; /* try 400, 500, 600, 700 */
+  font-style: normal;
+}
+
+.navbar{
+    /* background-color: wheat; */
+}
+
+.fa-compass{
+    color: #FF5A5F;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #e63d42 !important;
+}
+/* Footer */
+footer {
+  margin-top: auto;    /* Footer always stays at bottom */
+}
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    height: 7rem;
+    display: flex;
+    background-color: rgb(191, 185, 185);
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    text-align: center;
+}
+.f-info-links , .f-info-social, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.f-info-social i {
+    margin-left: 1.5rem;
+    font-size: 1.5rem ;
+}
+
+/* cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 2rem !important;
+    width: 100% !important;
+    object-fit: cover;
+    height: 20rem;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p {
+    font-weight: 400 !important;
+}
+.anchor-link{
+    text-decoration: none !important;
+}
+
+/* card-effect */
+.card-img-overlay{
+    opacity: 0 !important;
+}
+.card-img-overlay:hover{
+    opacity: .2 !important;
+    background-color: rgb(255, 255, 255);
+}
+
+/* new-list & Edit list */
+.add-btn , .edit-btn{ 
+    background-color: #FF5A5F !important;
+    border: none !important;
+}
+.add-listing-head , .edit-listing-head{
+    color: #e86e72;;
+}
+
+/* Show Page */
+.show-img{
+    height: 45vh;
+}
+.btns{
+    display: flex;
+
+}
+.show-edit-btn{
+    margin-right: 2rem;
+}
+.show-delete-btn {
+    margin-right: 2rem;
+}
+
+/* review-btn */
+.show-review-btn{
+    border: 2px solid #0a0a0a !important;
+}

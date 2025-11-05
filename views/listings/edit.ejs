@@ -1,0 +1,67 @@
+<% layout("/layouts/boilerplates") %>
+<body>
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <br> <br> 
+            <h1 class="edit-listing-head">Edit a List</h1>
+            <form action="/listings/<%= list._id %>?_method=PUT" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" name="listing[title]" value="<%= list.title %>" class="form-control" required>
+                    <div class="invalid-feedback">Title part can't be empty</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea type="text" name="listing[description]" class="form-control"  required> <%= list.description %></textarea>
+                    <div class="invalid-feedback">Add a Short Description</div>
+                </div>
+                <div class="mb-3">
+                    Original Image :
+                    <img src="<%= orgImgUrl  %>" alt="No Image Found" class="img-thumbnail" style="width:200px; height:150px;">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image:</label>
+                    <!-- list.image?.url || ''     => isse hum image to extract karre hai -->
+                    <input type="file" name="listing[image]" value="<%= list.image?.url || '' %>" class="form-control"> 
+                    <div class="invalid-feedback">This feild can't be Empty</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4"> 
+                        <label for="price" class="form-label">Price:</label>
+                        <input type="number" name="listing[price]" value="<%= list.price %>" class="form-control" required>
+                        <div class="invalid-feedback">Enter a Valid Price</div>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" name="listing[country]" value="<%= list.country %>" class="form-control" required >
+                        <div class="invalid-feedback">This feild can't be Empty</div>
+                    </div>
+                    <div class="mb-3 col-md-4 ">
+                        <label for="category" class="form-label" >Category: </label>
+                            <select class="form-select" name="listing[category]" id="category" required>
+                                <option selected disabled value=""><%= list.category %></option>
+                                <option value="Room">Room</option>
+                                <option value="Nature">Nature</option>
+                                <option value="Sea Side">Sea Side</option>
+                                <option value="Mountain">Mountain</option>
+                                <option value="Camping">Camping</option>
+                                <option value="Castles">Castles</option>
+                                <option value="Arctic">Arctic</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Iconic Cities">Iconic Cities</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Locaton:</label>
+                    <input type="text" name="listing[location]"value="<%= list.location %>" class="form-control" required>
+                    <div class="invalid-feedback">This feild can't be Empty</div>
+                </div>
+                <br> <br>
+                <button class="btn btn-dark edit-btn mb-3">Edit </button>
+
+                <br> <br>
+            </form>
+        </div>
+    </div>
+</body>
