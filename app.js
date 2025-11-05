@@ -105,7 +105,10 @@ app.use((req,res,next) =>{
     res.locals.currUser = req.user;
     next();
 });
-
+// Redirect root to /listing
+app.get("/", (req, res) => {
+    res.redirect("/listing");
+});
 // Using user Routes
 app.use("/", userRouter);
 // Using Listing Routes
