@@ -2,7 +2,7 @@
 ### *Find Your Next Stay — WanderLust makes hosting and traveling effortless.*
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/World_map_location_icon.svg" width="110" alt="WanderLust Logo"/>
+  <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" width="110" alt="WanderLust Logo"/>
 </p>
 
 > A full-stack travel and stay booking web application inspired by **Airbnb**, where users can explore destinations, host their places, and share experiences.
@@ -66,9 +66,16 @@ CLOUD_API_KEY=your_cloudinary_api_key
 CLOUD_API_SECRET=your_cloudinary_api_secret
 SECRET=your_session_secret
 
+# 5️⃣ Run the app
+node app.js
+```
 Then open http://localhost:8080
  in your browser 🌐
 
+ ---
+ 
+##  🧾 Folder Structure
+```
 WanderLust/
 │
 ├── model/              # Mongoose models (User, Listing, Review)
@@ -87,36 +94,41 @@ WanderLust/
 ├── package.json
 └── README.md
 
-🧑‍💻 Author
+```
+---
+## 🧑‍💻 Author
+
 👋 Khan Asjad Shamshad Ahmed
+
 💻 MERN Stack / Full Stack Developer
-📫 GitHub: Khanasjad27
+
+📫 GitHub: [Khanasjad27](https://github.com/Khanasjad27)
+
 🌐 Building creative, efficient, and scalable web experiences.
 
-💬 Acknowledgements
-Bootstrap 5
-Cloudinary
-Render
-MongoDB Atlas
-Passport.js
+---
+## 💬 Acknowledgements
 
-📜 License
+[Bootstrap 5](https://getbootstrap.com/) 
+
+[Cloudinary](https://cloudinary.com/)
+
+[Render](https://render.com/)
+
+[MongoDB Atlas](https://www.mongodb.com/atlas)
+
+[Passport.js](http://www.passportjs.org/)
+
+---
+## 📜 License
+
 This project is licensed under the MIT License — free to use and modify with attribution.
 
 ---
 
-✅ **How to use it:**
-1. Open your project folder in VS Code.  
-2. Create or open the `README.md` file at the root.  
-3. Paste all the above text.  
-4. Save the file.  
-5. Commit and push to GitHub:
+## 📝 Note
 
-```bash
-git add README.md
-git commit -m "Added professional README"
-git push
+> 🧭 WanderLust focuses on real-world web app structure using MVC architecture.
+It combines clean backend logic, dynamic EJS views, and cloud integration — built to demonstrate a complete full-stack workflow.
 
 
-# 5️⃣ Run the app
-node app.js
