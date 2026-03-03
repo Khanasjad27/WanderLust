@@ -1,24 +1,34 @@
+require("dotenv").config({ path: "../.env" }); // ✅ Fix for nested folder
+
 const mongoose = require("mongoose");
 const initData = require("./data.js");
-const Listing = require("../model/listing.js"); 
-
-// Connection with mongoose
-main()
-    .then ((res) =>{
-        console.log("Connection Created with mongoose");
-    }).catch(err => console.log(err));
+const Listing = require("../model/listing.js");
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/Wanderlust');
-};
+  console.log("ATLAS_URL =", process.env.ATLAS_URL); // Debug line
+  await mongoose.connect(process.env.ATLAS_URL);
+  console.log("✅ Connected to MongoDB Atlas");
+}
 
-const initDB = async() =>{
+main().catch(err => console.log("❌ Connection error:", err));
+
+const initDB = async () => {
+  try {
     await Listing.deleteMany({});
-    initData.data = initData.data.map((obj) =>({
-        ...obj, owner : "690b09ff8d60e8f02ad9874d",
+    console.log("🧹 Old data cleared!");
+
+    initData.data = initData.data.map(obj => ({
+      ...obj,
+      owner: "690bb68ae6b75490b1edb031", // Replace with your user ID
     }));
+
     await Listing.insertMany(initData.data);
-    console.log("Data Inserted");
+    console.log("✅ Sample data successfully inserted into MongoDB Atlas!");
+  } catch (e) {
+    console.log("❌ Error while inserting data:", e);
+  } finally {
+    mongoose.connection.close();
+  }
 };
 
 initDB();
